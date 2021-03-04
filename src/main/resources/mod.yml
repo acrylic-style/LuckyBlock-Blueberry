@@ -1,0 +1,8 @@
+id: lucky_block
+version: 1.0-SNAPSHOT
+main: xyz.acrylicstyle.luckyBlock.LuckyBlockMod
+name: LuckyBlock
+authors:
+  - "acrylic-style"
+description:
+  - "Lucky Block Mod"
