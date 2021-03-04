@@ -5,6 +5,9 @@ import net.blueberrymc.common.bml.BlueberryMod
 import net.blueberrymc.common.bml.event.event
 import net.blueberrymc.common.event.block.PlayerBlockBreakEvent
 import net.blueberrymc.registry.BlueberryRegistries
+import net.blueberrymc.world.item.crafting.RecipeBuilder
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.world.item.Items
 import xyz.acrylicstyle.luckyBlock.block.LuckyBlock
 import xyz.acrylicstyle.luckyBlock.block.getLuck
 import xyz.acrylicstyle.luckyBlock.item.LuckyBlockItem
@@ -12,7 +15,7 @@ import xyz.acrylicstyle.luckyBlock.util.LuckyManager
 
 class LuckyBlockMod : BlueberryMod() {
     companion object {
-        const val MAX_LUCK = 200
+        const val MAX_LUCK = 100
     }
 
     init {
@@ -32,5 +35,12 @@ class LuckyBlockMod : BlueberryMod() {
         val luckyBlockItem = LuckyBlockItem(luckyBlock)
         BlueberryRegistries.BLOCK.register("lucky_block", luckyBlock)
         BlueberryRegistries.ITEM.register("lucky_block", luckyBlockItem)
+        RecipeBuilder.shaped(ResourceLocation(modId, "lucky_block"), luckyBlockItem)
+            .define('G', Items.GOLD_INGOT)
+            .define('D', Items.DROPPER)
+            .pattern("GGG")
+            .pattern("GDG")
+            .pattern("GGG")
+            .addToRecipeManager()
     }
 }

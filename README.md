@@ -3,9 +3,10 @@
 ## Implemented
 - destroying lucky block causes the random event to happen
   - but since there's only one event, so it's actually not random for now.
+- Lucky Block Recipe
 
 ## Not implemented
-- Lucky Block Recipe
+- Increase luck
 - Remaining 0-*infinity* events
 
 ## License

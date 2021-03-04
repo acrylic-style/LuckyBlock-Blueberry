@@ -5,7 +5,7 @@ import net.minecraft.server.level.ServerPlayer
 import net.minecraft.util.Mth
 import xyz.acrylicstyle.luckyBlock.LuckyBlockMod
 import xyz.acrylicstyle.luckyBlock.util.lucks.InstaExplodeLarge
-import java.util.*
+import java.util.Random
 import kotlin.math.abs
 
 object LuckyManager {
@@ -30,6 +30,6 @@ object LuckyManager {
     }
 
     fun execute(baseLuck: Int, player: ServerPlayer, block: Block) {
-        getNearestLuck(getRandomLuck(baseLuck)).execute(player, block)
+        getNearestLuck(getRandomLuck(baseLuck)).execute(random, player, block)
     }
 }

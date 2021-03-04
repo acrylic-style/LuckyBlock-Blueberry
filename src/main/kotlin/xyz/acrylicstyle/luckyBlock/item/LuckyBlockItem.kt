@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level
 import xyz.acrylicstyle.luckyBlock.LuckyBlockMod
 import xyz.acrylicstyle.luckyBlock.block.LuckyBlock
 
-class LuckyBlockItem(luckyBlock: LuckyBlock) : BlockItem(luckyBlock, Properties().stacksTo(9999).tab(CreativeModeTab.TAB_BUILDING_BLOCKS).durability(LuckyBlockMod.MAX_LUCK)) {
+class LuckyBlockItem(luckyBlock: LuckyBlock) : BlockItem(luckyBlock, Properties().stacksTo(64).tab(CreativeModeTab.TAB_BUILDING_BLOCKS).durability(LuckyBlockMod.MAX_LUCK)) {
     companion object {
         fun setDamageValue(item: ItemStack, luck: Int) {
             if (luck == 0) {
